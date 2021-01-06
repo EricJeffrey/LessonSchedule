@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/drawerLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/main_float_btn_setting"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="end|bottom"
+        android:layout_margin="16dp"
+        app:backgroundTint="@color/colorAccent"
+        android:clickable="true"
+        android:focusable="true"
+        android:src="@drawable/sqsetting"/>
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+        <GridLayout
+            android:id="@+id/main_grid_layout_all_class"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:columnCount="6"
+            android:orientation="vertical"
+            android:useDefaultMargins="true"
+            android:background="@color/whiteSmoke"
+            android:rowCount="13">
+            <TextView
+                style="@style/TextViewTimeTable"
+                android:text="@string/timeClass1" />
+
+            <TextView
+                style="@style/TextViewTimeTable"
+                android:text="@string/timeClass2" />
+
+            <TextView
+                style="@style/TextViewTimeTable"
+                android:text="@string/timeClass3" />
+
+            <TextView
+                style="@style/TextViewTimeTable"
+                android:text="@string/timeClass4" />
+
+            <TextView
+                style="@style/TextViewTimeTable"
+                android:text="@string/timeClass5" />
+
+            <TextView
+                style="@style/TextViewTimeTable"
+                android:text="@string/timeClass6" />
+
+            <TextView
+                style="@style/TextViewTimeTable"
+                android:text="@string/timeClass7" />
+
+            <TextView
+                style="@style/TextViewTimeTable"
+                android:text="@string/timeClass8" />
+
+            <TextView
+                style="@style/TextViewTimeTable"
+                android:text="@string/timeClass9" />
+
+            <TextView
+                style="@style/TextViewTimeTable"
+                android:text="@string/timeClass10" />
+
+            <TextView
+                style="@style/TextViewTimeTable"
+                android:text="@string/timeClass11" />
+
+            <TextView
+                style="@style/TextViewTimeTable"
+                android:text="@string/timeClass12" />
+
+            <TextView
+                style="@style/TextViewTimeTable"
+                android:text="@string/timeClass13" />
+        </GridLayout>
+    </androidx.core.widget.NestedScrollView>
+
+    <com.google.android.material.appbar.AppBarLayout
+        app:elevation="0dp"
+        android:background="@color/colorAccent"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            app:layout_scrollFlags="scroll|enterAlways"
+            android:paddingStart="4dp"
+            android:paddingEnd="4dp"
+            android:paddingTop="3dp"
+            android:paddingBottom="3dp"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:layout_width="45dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/main_text_view_week_index"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="第一周"
+                    android:textStyle="bold"
+                    android:textColor="@color/whiteSmoke"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:id="@+id/main_text_view_semester"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="研一上"
+                    android:textColor="@color/whiteSmoke"
+                    android:textSize="13sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/main_linear_weekdays"
+                android:orientation="horizontal"
+                android:layout_gravity="center"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+                <TextView
+                    style="@style/TextViewWeekDay"
+                    android:text="@string/monday" />
+
+                <TextView
+                    style="@style/TextViewWeekDay"
+                    android:text="@string/tuesday" />
+
+                <TextView
+                    style="@style/TextViewWeekDay"
+                    android:text="@string/wednesday" />
+
+                <TextView
+                    style="@style/TextViewWeekDay"
+                    android:text="@string/thursday" />
+
+                <TextView
+                    style="@style/TextViewWeekDay"
+                    android:text="@string/friday" />
+            </LinearLayout>
+        </LinearLayout>
+    </com.google.android.material.appbar.AppBarLayout>
+</androidx.coordinatorlayout.widget.CoordinatorLayout>
